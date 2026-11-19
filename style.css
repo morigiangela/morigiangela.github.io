@@ -1,30 +1,31 @@
 /* ==========================================================================
    SITE PESSOAL - ANGELA VEIGA MORIGI
-   Estilos CSS Modernos, Elegantes e 100% Responsivos
+   Estilos CSS em Tons Dourados e Luxuosos (100% Responsivo)
    ========================================================================== */
 
 :root {
-  --primary: #0f172a;        /* Azul ardósia escuro / navy elegante */
-  --primary-light: #1e293b;
-  --accent: #0284c7;         /* Azul oceano refinado */
-  --accent-hover: #0369a1;
-  --accent-light: #f0f9ff;
-  --accent-glow: rgba(2, 132, 199, 0.15);
+  --primary: #1c1917;        /* Grafite escuro aquecido / ébano elegante */
+  --primary-light: #292524;
+  --accent: #b48320;         /* Dourado nobre / ouro polido */
+  --accent-hover: #926315;
+  --accent-light: #fef9ee;   /* Creme champanhe suave */
+  --accent-glow: rgba(180, 131, 32, 0.18);
+  --gold-metallic: linear-gradient(135deg, #d4af37 0%, #b48320 100%);
   
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-light: #94a3b8;
+  --text-main: #1c1917;
+  --text-muted: #57534e;
+  --text-light: #78716c;
   
   --bg-body: #ffffff;
-  --bg-light: #f8fafc;
+  --bg-light: #faf8f5;       /* Marfim / Alabastro elegante */
   --bg-card: #ffffff;
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
+  --border-color: #e7e2d9;
+  --border-light: #f3efe6;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --shadow-card-hover: 0 16px 32px -8px rgba(15, 23, 42, 0.14);
+  --shadow-sm: 0 1px 3px rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(28, 25, 23, 0.07), 0 2px 4px -2px rgba(28, 25, 23, 0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(28, 25, 23, 0.09), 0 8px 10px -6px rgba(28, 25, 23, 0.04);
+  --shadow-card-hover: 0 16px 32px -8px rgba(180, 131, 32, 0.18);
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -114,13 +115,13 @@ ul {
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: var(--gold-metallic);
   color: #ffffff;
   border-radius: 10px;
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
-  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.25);
+  box-shadow: 0 3px 8px rgba(180, 131, 32, 0.3);
 }
 
 .nav-links {
@@ -144,18 +145,19 @@ ul {
 }
 
 .btn-nav-cta {
-  background-color: var(--primary);
+  background: var(--gold-metallic);
   color: #ffffff !important;
   padding: 0.55rem 1.35rem !important;
   border-radius: var(--radius-full);
   font-weight: 600;
   transition: var(--transition);
+  box-shadow: 0 3px 8px rgba(180, 131, 32, 0.25);
 }
 
 .btn-nav-cta:hover {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, #c59b27 0%, #926315 100%);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  box-shadow: 0 5px 14px rgba(180, 131, 32, 0.35);
 }
 
 /* BOTÃO HAMBÚRGUER MOBILE */
@@ -183,9 +185,9 @@ ul {
   transition: var(--transition);
 }
 
-/* Animação do botão para 'X' quando aberto */
 .mobile-menu-btn.active .hamburger-bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
+  background-color: var(--accent);
 }
 
 .mobile-menu-btn.active .hamburger-bar:nth-child(2) {
@@ -194,6 +196,7 @@ ul {
 
 .mobile-menu-btn.active .hamburger-bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--accent);
 }
 
 /* ==========================================================================
@@ -221,6 +224,7 @@ ul {
   letter-spacing: 0.08em;
   color: var(--accent);
   background: var(--accent-light);
+  border: 1px solid rgba(180, 131, 32, 0.2);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.75rem;
@@ -244,7 +248,7 @@ ul {
    ========================================================================== */
 .hero-section {
   padding: 5rem 0 6rem 0;
-  background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fdfbf7 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
 }
@@ -274,10 +278,10 @@ ul {
 .status-dot {
   width: 8px;
   height: 8px;
-  background-color: #10b981;
+  background-color: #d4af37;
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
 }
 
 .hero-title {
@@ -290,7 +294,7 @@ ul {
 }
 
 .highlight-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 70%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -314,6 +318,9 @@ ul {
   gap: 1rem;
   background: #ffffff;
   border-left: 4px solid var(--accent);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
@@ -358,14 +365,14 @@ ul {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: var(--gold-metallic);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  box-shadow: 0 4px 14px rgba(180, 131, 32, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+  box-shadow: 0 8px 22px rgba(180, 131, 32, 0.45);
 }
 
 .btn-secondary {
@@ -376,7 +383,7 @@ ul {
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-light);
+  background-color: var(--accent-light);
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
@@ -403,6 +410,7 @@ ul {
 
 .profile-card:hover {
   transform: translateY(-4px);
+  border-color: rgba(180, 131, 32, 0.35);
   box-shadow: var(--shadow-card-hover);
 }
 
@@ -411,7 +419,7 @@ ul {
   height: 96px;
   margin: 0 auto 1.25rem auto;
   border-radius: 50%;
-  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  background: linear-gradient(135deg, #fef9ee 0%, #fef08a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -419,7 +427,7 @@ ul {
   font-size: 1.8rem;
   color: var(--accent);
   border: 4px solid #ffffff;
-  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.18);
+  box-shadow: 0 6px 16px rgba(180, 131, 32, 0.22);
 }
 
 .profile-card-name {
@@ -486,6 +494,7 @@ ul {
   width: 52px;
   height: 52px;
   background-color: var(--accent-light);
+  border: 1px solid rgba(180, 131, 32, 0.2);
   color: var(--accent);
   display: inline-flex;
   align-items: center;
@@ -539,7 +548,7 @@ ul {
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  background: #f1f5f9;
+  background: var(--accent-light);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -588,7 +597,8 @@ ul {
   width: 56px;
   height: 56px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--accent-light), #bae6fd);
+  background: linear-gradient(135deg, var(--accent-light), #fef08a);
+  border: 1px solid rgba(180, 131, 32, 0.25);
   color: var(--accent);
   border-radius: 14px;
   display: flex;
@@ -660,7 +670,8 @@ ul {
   width: 58px;
   height: 58px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  background: linear-gradient(135deg, #fef9ee, #fef08a);
+  border: 1px solid rgba(180, 131, 32, 0.25);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -673,8 +684,9 @@ ul {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #10b981;
-  background: #ecfdf5;
+  color: #b48320;
+  background: var(--accent-light);
+  border: 1px solid rgba(180, 131, 32, 0.25);
   padding: 0.2rem 0.65rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.35rem;
@@ -720,7 +732,7 @@ ul {
 }
 
 .check-bullet {
-  color: #10b981;
+  color: var(--accent);
   font-weight: 800;
   font-size: 1.1rem;
   line-height: 1.3;
@@ -766,13 +778,15 @@ ul {
 }
 
 .hard-icon {
-  background: #e0f2fe;
+  background: var(--accent-light);
+  border: 1px solid rgba(180, 131, 32, 0.2);
   color: var(--accent);
 }
 
 .soft-icon {
-  background: #fef3c7;
-  color: #d97706;
+  background: #fdf8e2;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #926315;
 }
 
 .skills-title {
@@ -877,8 +891,9 @@ ul {
   width: 56px;
   height: 56px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-  color: #15803d;
+  background: linear-gradient(135deg, #fef9ee, #fef08a);
+  border: 1px solid rgba(180, 131, 32, 0.25);
+  color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -890,8 +905,9 @@ ul {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #15803d;
-  background: #f0fdf4;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid rgba(180, 131, 32, 0.2);
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.5rem;
@@ -936,14 +952,14 @@ ul {
 
 .empty-projects-card:hover {
   border-color: var(--accent);
-  background: #fafcff;
+  background: #fdfbf7;
 }
 
 .empty-icon-box {
   width: 68px;
   height: 68px;
   margin: 0 auto 1.5rem auto;
-  background: var(--bg-light);
+  background: var(--accent-light);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -970,13 +986,15 @@ ul {
    SEÇÃO CONTATO
    ========================================================================== */
 .section-contact {
-  background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
   color: #ffffff;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .section-header-white .section-tag-light {
-  background: rgba(255, 255, 255, 0.15);
-  color: #bae6fd;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #fef08a;
 }
 
 .section-header-white .section-title {
@@ -984,7 +1002,7 @@ ul {
 }
 
 .section-header-white .section-description {
-  color: #94a3b8;
+  color: #a8a29e;
 }
 
 .contact-cards-grid {
@@ -999,26 +1017,26 @@ ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   padding: 2rem 1.75rem;
   border-radius: var(--radius-lg);
   transition: var(--transition);
 }
 
 .contact-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #38bdf8;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #d4af37;
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
 }
 
 .contact-card-icon {
   width: 60px;
   height: 60px;
   flex-shrink: 0;
-  background: rgba(2, 132, 199, 0.25);
-  color: #38bdf8;
+  background: rgba(212, 175, 55, 0.2);
+  color: #fde047;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1026,7 +1044,7 @@ ul {
 }
 
 .whatsapp-icon {
-  background: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.2);
   color: #34d399;
 }
 
@@ -1037,7 +1055,7 @@ ul {
 
 .contact-type {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #a8a29e;
   font-weight: 500;
 }
 
@@ -1051,7 +1069,7 @@ ul {
 
 .contact-cta-hint {
   font-size: 0.85rem;
-  color: #38bdf8;
+  color: #fde047;
   font-weight: 600;
 }
 
@@ -1059,10 +1077,10 @@ ul {
    RODAPÉ (FOOTER)
    ========================================================================== */
 .footer {
-  background-color: #0b1120;
+  background-color: #141210;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2.25rem 0;
-  color: #64748b;
+  color: #78716c;
   text-align: center;
   font-size: 0.9rem;
 }
@@ -1075,11 +1093,11 @@ ul {
 }
 
 .footer-copy {
-  color: #94a3b8;
+  color: #a8a29e;
 }
 
 .footer-sub a {
-  color: var(--accent);
+  color: #d4af37;
   text-decoration: underline;
 }
 
@@ -1168,7 +1186,7 @@ ul {
   }
 
   .nav-link:hover {
-    background-color: var(--bg-light);
+    background-color: var(--accent-light);
   }
 
   .btn-nav-cta {
