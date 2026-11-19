@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site Pessoal de Angela Veiga Morigi - Estudante de Administração e Secretária. Conheça minha trajetória acadêmica, experiências e contatos.">
+  <meta name="description" content="Site Pessoal de Angela Veiga Morigi - Estudante de Administração e Secretária. Conheça minha formação acadêmica, experiências e contatos profissionais.">
   <meta name="author" content="Angela Veiga Morigi">
   <title>Angela Veiga Morigi | Site Pessoal</title>
 
@@ -19,21 +19,19 @@
   <!-- CABEÇALHO / NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#inicio" class="nav-brand">
+      <a href="#inicio" class="nav-brand" aria-label="Ir para o início">
         <span class="brand-initials">AM</span>
         <span class="brand-name">Angela Morigi</span>
       </a>
 
       <!-- Botão Menu Mobile -->
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação">
-        <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
       </button>
 
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links" id="navLinks" role="navigation">
         <a href="#inicio" class="nav-link active">Início</a>
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#formacao" class="nav-link">Formação</a>
@@ -59,24 +57,24 @@
             <span class="highlight-text">Angela Veiga Morigi</span>
           </h1>
           <p class="hero-subtitle">
-            Secretária no consultório <strong>Schroeder e Dalla Vecchia Odontologia Especializada</strong> e graduanda na <strong>Universidade Atitus</strong>.
+            Estudante de <strong>Administração</strong> (2º semestre) na <strong>Universidade Atitus</strong> e <strong>Secretária</strong> no consultório <strong>Schroeder e Dalla Vecchia Odontologia Especializada</strong>.
           </p>
 
           <div class="quote-card">
-            <div class="quote-icon">“</div>
+            <div class="quote-icon" aria-hidden="true">“</div>
             <p class="quote-text">Grandes resultados começam com pequenas atitudes.</p>
           </div>
 
           <div class="hero-actions">
             <a href="#contato" class="btn btn-primary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Entrar em Contato
             </a>
             <a href="#sobre" class="btn btn-secondary">
-              Conhecer Trajetória
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              Conhecer Perfil
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
@@ -89,23 +87,27 @@
             <div class="avatar-circle">
               <span>AVM</span>
             </div>
-            <h3 class="profile-card-name">Angela Veiga Morigi</h3>
-            <p class="profile-card-role">Administração & Atendimento</p>
+            <h2 class="profile-card-name">Angela Veiga Morigi</h2>
+            <p class="profile-card-role">Administração & Secretariado</p>
 
             <div class="profile-divider"></div>
 
             <div class="profile-meta-list">
               <div class="meta-item">
+                <span class="meta-label">Curso</span>
+                <span class="meta-val">Administração</span>
+              </div>
+              <div class="meta-item">
                 <span class="meta-label">Instituição</span>
                 <span class="meta-val">Universidade Atitus</span>
               </div>
               <div class="meta-item">
-                <span class="meta-label">Previsão</span>
-                <span class="meta-val">Conclusão em 2030</span>
+                <span class="meta-label">Semestre</span>
+                <span class="meta-val">2º Semestre</span>
               </div>
               <div class="meta-item">
-                <span class="meta-label">Localização</span>
-                <span class="meta-val">Passo Fundo / RS</span>
+                <span class="meta-label">Conclusão</span>
+                <span class="meta-val">2030</span>
               </div>
             </div>
           </div>
@@ -117,58 +119,61 @@
     <section class="section section-light" id="sobre">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Perfil</span>
+          <span class="section-tag">Apresentação</span>
           <h2 class="section-title">Sobre Mim</h2>
-          <p class="section-description">Apresentação pessoal e foco de desenvolvimento profissional</p>
+          <p class="section-description">Apresentação pessoal e acadêmica</p>
         </div>
 
         <div class="about-grid">
           <div class="about-card main-about">
             <div class="card-icon-box">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
-            <h3>Dedicação e Aprendizado Contínuo</h3>
+            <h3>Dedicação e Organização</h3>
             <p>
-              Sou <strong>Angela Veiga Morigi</strong>, estudante do 2º semestre do curso de Bacharelado em Administração na Universidade Atitus. Atualmente, atuo como secretária no consultório <em>Schroeder e Dalla Vecchia Odontologia Especializada</em>, onde exerço atendimento ao público e funções organizacionais diárias.
+              Olá! Sou <strong>Angela Veiga Morigi</strong>, estudante do 2º semestre do curso de Administração na <strong>Universidade Atitus</strong>, com conclusão prevista para 2030.
             </p>
             <p>
-              Acredito que pequenas atitudes cotidianas — como pontualidade, comunicação clara e empatia — são os pilares para construir grandes resultados tanto no ambiente acadêmico quanto profissional.
+              Atualmente trabalho como secretária no consultório odontológico <strong>Schroeder e Dalla Vecchia Odontologia Especializada</strong>, exercendo atendimento ao público e rotinas administrativas diárias com empatia, responsabilidade e proatividade.
+            </p>
+            <p>
+              Minha filosofia diária é guiada pela certeza de que: <em>"Grandes resultados começam com pequenas atitudes."</em>
             </p>
           </div>
 
           <div class="about-highlights">
             <div class="highlight-item">
               <div class="hi-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                   <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                 </svg>
               </div>
               <div>
-                <h4>Graduação em Andamento</h4>
-                <p>Construção contínua de fundamentos em gestão, finanças e processos administrativos.</p>
+                <h4>Formação em Administração</h4>
+                <p>Estudante do 2º semestre na Universidade Atitus, desenvolvendo conhecimentos acadêmicos em gestão.</p>
               </div>
             </div>
 
             <div class="highlight-item">
               <div class="hi-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                 </svg>
               </div>
               <div>
-                <h4>Vivência Prática</h4>
-                <p>Atuação direta com atendimento humanizado a pacientes e rotinas de consultório.</p>
+                <h4>Experiência Prática</h4>
+                <p>Atuação como secretária no consultório Schroeder e Dalla Vecchia Odontologia Especializada.</p>
               </div>
             </div>
 
             <div class="highlight-item">
               <div class="hi-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -176,8 +181,8 @@
                 </svg>
               </div>
               <div>
-                <h4>Habilidades Interpessoais</h4>
-                <p>Foco constante em empatia, responsabilidade e relacionamento em equipe.</p>
+                <h4>Relacionamento e Atendimento</h4>
+                <p>Foco contínuo em acolhimento ao público, empatia e organização de tarefas.</p>
               </div>
             </div>
           </div>
@@ -191,27 +196,23 @@
         <div class="section-header">
           <span class="section-tag">Educação</span>
           <h2 class="section-title">Formação Acadêmica</h2>
-          <p class="section-description">Base teórica e desenvolvimento universitário</p>
+          <p class="section-description">Ensino Superior em andamento</p>
         </div>
 
         <div class="timeline-container">
           <div class="timeline-card">
             <div class="timeline-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
             </div>
             <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <span class="timeline-period">Em andamento • 2º Semestre (Previsão de Conclusão: 2030)</span>
-                  <h3 class="timeline-title">Bacharelado em Administração</h3>
-                  <h4 class="timeline-subtitle">Universidade Atitus</h4>
-                </div>
-              </div>
+              <span class="timeline-period">2º Semestre • Previsão de Conclusão em 2030</span>
+              <h3 class="timeline-title">Administração</h3>
+              <h4 class="timeline-subtitle">Universidade Atitus</h4>
               <p class="timeline-text">
-                Formação com foco no aprendizado de planejamento estratégico, rotinas administrativas, gestão empresarial e competências comportamentais necessárias para liderar e organizar processos.
+                Curso voltado à formação integral em administração, desenvolvimento de visão estratégica, processos organizacionais e gestão.
               </p>
             </div>
           </div>
@@ -223,16 +224,16 @@
     <section class="section section-light" id="experiencia">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Trajetória</span>
+          <span class="section-tag">Atuação</span>
           <h2 class="section-title">Experiência Profissional</h2>
-          <p class="section-description">Atuação no mercado e aplicação prática de habilidades</p>
+          <p class="section-description">Atuação no mercado de trabalho</p>
         </div>
 
         <div class="experience-grid">
           <div class="experience-card">
             <div class="exp-header">
               <div class="exp-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                 </svg>
@@ -247,20 +248,20 @@
 
             <div class="exp-body">
               <p class="exp-desc">
-                Responsável pelo suporte administrativo geral, garantindo um ambiente organizado e uma experiência acolhedora para os pacientes:
+                Atuação em consultório odontológico prestando suporte completo ao atendimento de pacientes e à organização administrativa do espaço:
               </p>
               <ul class="exp-points">
                 <li>
                   <span class="check-bullet">✓</span>
-                  <span><strong>Atendimento ao público:</strong> Recepção e acolhimento humanizado de pacientes, prezando pela empatia e boa comunicação.</span>
+                  <span><strong>Atendimento ao público:</strong> Recepção atenciosa, comunicação clara e acolhimento com empatia.</span>
                 </li>
                 <li>
                   <span class="check-bullet">✓</span>
-                  <span><strong>Rotina de escritório:</strong> Organização diária de tarefas, agendamentos e suporte aos profissionais do consultório.</span>
+                  <span><strong>Organização:</strong> Controle e responsabilidade no fluxo diário do consultório.</span>
                 </li>
                 <li>
                   <span class="check-bullet">✓</span>
-                  <span><strong>Uso de ferramentas digitais:</strong> Aplicação de ferramentas de escritório e planilhas para controle das atividades.</span>
+                  <span><strong>Uso de ferramentas digitais:</strong> Aplicação prática de ferramentas do pacote Office e Google Planilhas.</span>
                 </li>
               </ul>
             </div>
@@ -275,7 +276,7 @@
         <div class="section-header">
           <span class="section-tag">Competências</span>
           <h2 class="section-title">Minhas Habilidades</h2>
-          <p class="section-description">Conjunto de competências técnicas e comportamentais</p>
+          <p class="section-description">Competências técnicas e comportamentais</p>
         </div>
 
         <div class="skills-grid">
@@ -283,40 +284,33 @@
           <div class="skills-card">
             <div class="skills-card-header">
               <div class="skills-type-icon hard-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <polyline points="16 18 22 12 16 6"></polyline>
                   <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
               </div>
               <div>
                 <h3 class="skills-title">Hard Skills</h3>
-                <p class="skills-subtitle">Competências técnicas e ferramentas</p>
+                <p class="skills-subtitle">Competências técnicas</p>
               </div>
             </div>
 
             <div class="skills-list">
               <div class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Atendimento ao público</span>
-                </div>
+                <span class="skill-bullet">•</span>
+                <span class="skill-name">Atendimento ao público</span>
               </div>
-
               <div class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Ferramentas Office & Google Planilhas</span>
-                </div>
+                <span class="skill-bullet">•</span>
+                <span class="skill-name">Conhecimentos básicos em ferramentas do Office e Google Planilhas</span>
               </div>
-
               <div class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Comunicação profissional</span>
-                </div>
+                <span class="skill-bullet">•</span>
+                <span class="skill-name">Comunicação</span>
               </div>
-
               <div class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Conhecimentos acadêmicos em Administração</span>
-                </div>
+                <span class="skill-bullet">•</span>
+                <span class="skill-name">Conhecimentos acadêmicos em administração</span>
               </div>
             </div>
           </div>
@@ -325,13 +319,13 @@
           <div class="skills-card">
             <div class="skills-card-header">
               <div class="skills-type-icon soft-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
               </div>
               <div>
                 <h3 class="skills-title">Soft Skills</h3>
-                <p class="skills-subtitle">Competências comportamentais e atitudes</p>
+                <p class="skills-subtitle">Habilidades comportamentais</p>
               </div>
             </div>
 
@@ -341,7 +335,7 @@
               <span class="skill-tag">Organização</span>
               <span class="skill-tag">Proatividade</span>
               <span class="skill-tag">Adaptabilidade</span>
-              <span class="skill-tag">Relacionamento Interpessoal</span>
+              <span class="skill-tag">Relacionamento interpessoal</span>
             </div>
           </div>
         </div>
@@ -352,25 +346,25 @@
     <section class="section section-light" id="cursos">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Desenvolvimento</span>
+          <span class="section-tag">Capacitação</span>
           <h2 class="section-title">Cursos Complementares</h2>
-          <p class="section-description">Capacitações e programas de formação</p>
+          <p class="section-description">Cursos e programas realizados</p>
         </div>
 
         <div class="courses-grid">
           <div class="course-card">
             <div class="course-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="8" r="7"></circle>
                 <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
               </svg>
             </div>
             <div class="course-details">
-              <span class="course-tag">Programa de Capacitação</span>
+              <span class="course-tag">Programa de Formação</span>
               <h3 class="course-title">Programa Atuação Jovem</h3>
               <h4 class="course-institution">Sicredi</h4>
               <p class="course-desc">
-                Programa focado no desenvolvimento de competências cidadãs, cooperativas, financeiras e profissionais voltado para jovens em início de carreira.
+                Programa do Sicredi focado em formação, liderança, cooperação e desenvolvimento de jovens talentos.
               </p>
             </div>
           </div>
@@ -390,16 +384,16 @@
         <div class="projects-container">
           <div class="empty-projects-card">
             <div class="empty-icon-box">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="12" y1="18" x2="12" y2="12"></line>
                 <line x1="9" y1="15" x2="15" y2="15"></line>
               </svg>
             </div>
-            <h3>Projetos em Construção</h3>
+            <h3>Projetos Futuros</h3>
             <p>
-              Atualmente no segundo semestre da graduação em Administração, estou desenvolvendo novos estudos e iniciativas acadêmicas. Em breve, os principais projetos e estudos de caso serão disponibilizados nesta seção.
+              No momento, não há projetos concluídos registrados. Conforme novas iniciativas, estudos e projetos forem sendo desenvolvidos ao longo da graduação em Administração, eles serão publicados aqui.
             </p>
           </div>
         </div>
@@ -410,16 +404,16 @@
     <section class="section section-contact" id="contato">
       <div class="container">
         <div class="section-header section-header-white">
-          <span class="section-tag section-tag-light">Vamos Conversar?</span>
+          <span class="section-tag section-tag-light">Fale Comigo</span>
           <h2 class="section-title">Contatos Profissionais</h2>
-          <p class="section-description">Fique à vontade para entrar em contato comigo através dos canais abaixo</p>
+          <p class="section-description">Entre em contato através dos canais abaixo</p>
         </div>
 
         <div class="contact-cards-grid">
           <!-- CARD EMAIL -->
-          <a href="mailto:morigiangela81@gmail.com" class="contact-card" title="Enviar E-mail para Angela">
+          <a href="mailto:morigiangela81@gmail.com" class="contact-card" title="Enviar e-mail para morigiangela81@gmail.com">
             <div class="contact-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
@@ -427,21 +421,21 @@
             <div class="contact-card-info">
               <span class="contact-type">E-mail Profissional</span>
               <strong class="contact-value">morigiangela81@gmail.com</strong>
-              <span class="contact-cta-hint">Clique para enviar mensagem →</span>
+              <span class="contact-cta-hint">Clique para enviar um e-mail →</span>
             </div>
           </a>
 
           <!-- CARD WHATSAPP / TELEFONE -->
-          <a href="https://wa.me/5554999607802?text=Ol%C3%A1%2C%20Angela!%20Vim%20pelo%20seu%20site%20pessoal." target="_blank" rel="noopener noreferrer" class="contact-card" title="Abrir conversa no WhatsApp com Angela">
+          <a href="https://wa.me/5554999607802?text=Ol%C3%A1%2C%20Angela!%20Vim%20pelo%20seu%20site%20pessoal." target="_blank" rel="noopener noreferrer" class="contact-card" title="Conversar no WhatsApp">
             <div class="contact-card-icon whatsapp-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
             </div>
             <div class="contact-card-info">
-              <span class="contact-type">WhatsApp / Telefone</span>
+              <span class="contact-type">Celular / WhatsApp</span>
               <strong class="contact-value">(54) 99960-7802</strong>
-              <span class="contact-cta-hint">Clique para iniciar conversa →</span>
+              <span class="contact-cta-hint">Clique para conversar no WhatsApp →</span>
             </div>
           </a>
         </div>
@@ -456,7 +450,7 @@
         © 2026 Angela Veiga Morigi. Todos os direitos reservados.
       </p>
       <p class="footer-sub">
-        Site hospedado com <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+        Site hospedado no <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
       </p>
     </div>
   </footer>
