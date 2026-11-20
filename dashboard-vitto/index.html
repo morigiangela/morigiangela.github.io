@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Vitto</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🍕 Dashboard Vitto – Pizzaria</h1>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi">
+      <strong>Faturamento</strong>
+      <span id="kpi-faturamento">R$ 0,00</span>
+    </div>
+    <div class="kpi">
+      <strong>Pedidos</strong>
+      <span id="kpi-pedidos">0</span>
+    </div>
+    <div class="kpi">
+      <strong>Ticket Médio</strong>
+      <span id="kpi-ticket">R$ 0,00</span>
+    </div>
+  </section>
+
+  <section class="filters">
+    <div class="filter-periodo">
+      <div class="lbl">De <input type="date" id="filter-start" /></div>
+      <div class="lbl">Até <input type="date" id="filter-end" /></div>
+    </div>
+    <label>Categoria
+      <select id="filter-categoria"><option value="">Todas</option></select>
+    </label>
+    <label>Tamanho
+      <select id="filter-tamanho"><option value="">Todos</option></select>
+    </label>
+    <button id="apply-filters">Aplicar</button>
+    <span id="incomplete-notice">⚠️ Mês atual incompleto</span>
+  </section>
+
+  <section class="charts">
+    <div class="chart-card chart-full">
+      <h2 id="title-mensal">Faturamento cresce ao longo do período selecionado</h2>
+      <canvas id="chart-mensal"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>As pizzas mais vendidas lideram por grande margem</h2>
+      <div id="top10-mode">
+        <button id="btn-unidades" class="active">Unidades</button>
+        <button id="btn-faturamento">Faturamento (R$)</button>
+      </div>
+      <canvas id="chart-top10"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>O pico de vendas concentra-se entre 18h e 21h</h2>
+      <canvas id="chart-horario"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>O tamanho M domina o volume de vendas</h2>
+      <canvas id="chart-tamanho"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>A categoria Clássica lidera, mas todas têm peso similar</h2>
+      <canvas id="chart-categoria"></canvas>
+    </div>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
