@@ -202,61 +202,8 @@ function renderMensal(monthEntries, catId, tamId, incompleteMes) {
 }
 
 // ── Top 10 Pizzas ─────────────────────────────────────────
-function renderTop10(monthEntries, catId, tamId) {
-  // Agregar totais de pizza
-  const agg = {};
-  monthEntries.forEach(([, m]) => {
-    Object.entries(m.pizza).forEach(([pid, pd]) => {
-      const pKey = Object.keys(DATA.pizzas).find(k => String(DATA.pizzas[k]) === pid);
-      if (!pKey) return;
-      // filtrar categoria
-      if (catId && !pizzaBelongsToCat(pKey, catId)) return;
-      // filtrar tamanho
-      if (tamId) {
-        const pTam = pKey.split('_').pop().toUpperCase();
-        if (tamId && pTam && pTam !== tamName(tamId).toUpperCase() && pTam !== String(tamId).toUpperCase()) return;
-      }
-      if (!agg[pid]) agg[pid] = { unidades: 0, faturamento: 0 };
-      agg[pid].unidades   += pd.unidades;
-      agg[pid].faturamento += pd.faturamento;
-    });
-  });
+function renderTop10(monthEntries, catId, tamId) { const agg = {}; monthEntries.forEach(([, m]) => { if (!m || !m.pizza) return; Object.entries(m.pizza).forEach(([pid, pd]) => { if (!pd) return; const u = Number(pd.unidades || 0); const f = Number(pd.faturamento || 0); if (!agg[pid]) agg[pid] = { unidades: 0, faturamento: 0 }; agg[pid].unidades += u; agg[pid].faturamento += f; }); }); const metric = (typeof top10Mode !== 'undefined' && top10Mode) ? top10Mode : 'unidades'; const sorted = Object.entries(agg).sort((a, b) => (b[1][metric] || 0) - (a[1][metric] || 0)).slice(0, 10); const labels = sorted.map(([pid]) => (typeof pizzaName === 'function' ? pizzaName(pid) : pid)); const values = sorted.map(([, d]) => d[metric] || 0); const colors = (typeof barColors === 'function') ? barColors(values) : values.map((_, i) => i === 0 ? '#dc2626' : '#9ca3af'); makeChart('chart-top10', { type: 'bar', data: { labels, datasets: [{ data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false }] }, options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true } } } }); }
 
-  const metric = top10Mode;
-  const sorted = Object.entries(agg)
-    .sort((a, b) => b[1][metric] - a[1][metric])
-    .slice(0, 10);
-
-  const labels = sorted.map(([pid]) => pizzaName(pid));
-  const values = sorted.map(([, d]) => d[metric]);
-  const colors = barColors(values);
-
-  makeChart('chart-top10', {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{ data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: ctx => metric === 'faturamento' ? brl(ctx.raw) : ctx.raw + ' un.'
-          }
-        }
-      },
-      scales: {
-        x: { beginAtZero: true },
-        y: { ticks: { font: { size: 10 } } }
-      }
-    }
-  });
-}
-
-// ── Vendas por Horário ────────────────────────────────────
 function renderHorario(monthEntries, catId, tamId) {
   // hora: chave '0'..'23'
   const totals = Array(24).fill(0);
