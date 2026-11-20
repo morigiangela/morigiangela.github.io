@@ -104,7 +104,7 @@ function calcKPIs(monthEntries, catId, tamId) {
         const pKey = Object.keys(DATA.pizzas).find(k => String(DATA.pizzas[k]) === pid);
         if (!pKey) return;
         const pTam = pKey.split('_').pop().toUpperCase();
-        if (pTam !== tamName(tamId).toUpperCase()) return;
+        if (tamId && pTam && pTam !== tamName(tamId).toUpperCase() && pTam !== String(tamId).toUpperCase()) return;
         if (pizzaBelongsToCat(pKey, catId)) fat += pdata.faturamento;
       });
     }
@@ -214,7 +214,7 @@ function renderTop10(monthEntries, catId, tamId) {
       // filtrar tamanho
       if (tamId) {
         const pTam = pKey.split('_').pop().toUpperCase();
-        if (pTam !== tamName(tamId).toUpperCase()) return;
+        if (tamId && pTam && pTam !== tamName(tamId).toUpperCase() && pTam !== String(tamId).toUpperCase()) return;
       }
       if (!agg[pid]) agg[pid] = { unidades: 0, faturamento: 0 };
       agg[pid].unidades   += pd.unidades;
